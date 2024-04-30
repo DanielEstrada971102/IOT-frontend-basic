@@ -10,8 +10,8 @@ async function fetchData() {
         // Hacemos una solicitud al servidor para obtener los datos
         const response = await fetch(
             device != "all"
-                ? `http://localhost:8000/sensordata/${device}?limit=${limit}&sortby=${order_by}&lastest1st=${lastest1st}`
-                : `http://localhost:8000/sensordata?limit=${limit}&sortby=${order_by}&lastest1st=${lastest1st}`,
+                ? `https://backend-guml.onrender.com/sensordata/${device}?limit=${limit}&sortby=${order_by}&lastest1st=${lastest1st}`
+                : `https://backend-guml.onrender.com/sensordata?limit=${limit}&sortby=${order_by}&lastest1st=${lastest1st}`,
         );
         
         // Convertimos la respuesta a formato JSON
